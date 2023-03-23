@@ -132,10 +132,10 @@ TextureImporter:
       name: character_0
       rect:
         serializedVersion: 2
-        x: 100
-        y: 490
-        width: 180
-        height: 200
+        x: 20
+        y: 98
+        width: 36
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dda9319da5981334194f33dcf62c5b9a
-      internalID: -45035535
+      spriteID: 664d54bbf2ad30643afab8debfc5a852
+      internalID: 361273773
       vertices: []
       indices: 
       edges: []
@@ -153,10 +153,10 @@ TextureImporter:
       name: character_1
       rect:
         serializedVersion: 2
-        x: 550
-        y: 490
-        width: 130
-        height: 270
+        x: 110
+        y: 98
+        width: 26
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5417123aa4dad384c9c8fd6c54acd694
-      internalID: 724559474
+      spriteID: 96b7b3953a6fb0746a759d644bc0c682
+      internalID: 546884300
       vertices: []
       indices: 
       edges: []
@@ -174,10 +174,10 @@ TextureImporter:
       name: character_2
       rect:
         serializedVersion: 2
-        x: 140
-        y: 90
-        width: 160
-        height: 170
+        x: 28
+        y: 18
+        width: 32
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,8 +185,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1d72d9475be74c4591e5520b6669e07
-      internalID: 788014988
+      spriteID: bda6cda7c7383734c894be37d39a2118
+      internalID: 109669298
       vertices: []
       indices: 
       edges: []
@@ -202,9 +202,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      character_2: 788014988
-      character_1: 724559474
-      character_0: -45035535
+      character_2: 109669298
+      character_1: 546884300
+      character_0: 361273773
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -8,10 +8,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Blocking
   - Water
   - UI
-  - 
+  - Actor
   - 
   - 
   - 
@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Floor
+    uniqueID: 4151363509
+    locked: 0
+  - name: Actor
+    uniqueID: 3612495891
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
