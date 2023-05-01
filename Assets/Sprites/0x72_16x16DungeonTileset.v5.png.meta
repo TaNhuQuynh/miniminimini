@@ -153,8 +153,8 @@ TextureImporter:
       name: 0x72_16x16DungeonTileset.v5_1
       rect:
         serializedVersion: 2
-        x: 208
-        y: 42
+        x: 205
+        y: 40
         width: 16
         height: 33
       alignment: 0
@@ -443,6 +443,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: chest_1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 48
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 678d90285e97f1b4f928988abee45ed3
+      internalID: -1096364117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest_0
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e1f4a2298dcb64fa9c278203c08557
+      internalID: 1843813193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -454,6 +496,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      chest_0: 1843813193
       0x72_16x16DungeonTileset.v5_6: -651222735
       0x72_16x16DungeonTileset.v5_11: -209988145
       0x72_16x16DungeonTileset.v5_1: 154203981
@@ -464,6 +507,7 @@ TextureImporter:
       0x72_16x16DungeonTileset.v5_5: 171832560
       0x72_16x16DungeonTileset.v5_3: 1521827467
       0x72_16x16DungeonTileset.v5_14: -487069587
+      chest_1: -1096364117
       0x72_16x16DungeonTileset.v5_13: 2100515933
       0x72_16x16DungeonTileset.v5_12: -1852818345
       0x72_16x16DungeonTileset.v5_4: -1582648115
