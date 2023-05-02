@@ -452,7 +452,7 @@ TextureImporter:
         width: 16
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -473,7 +473,7 @@ TextureImporter:
         width: 16
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -481,6 +481,153 @@ TextureImporter:
       bones: []
       spriteID: 88e1f4a2298dcb64fa9c278203c08557
       internalID: 1843813193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: k1
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 225
+        width: 9
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0.467108}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faba0e587fe14fa43a60bb66a7ebe7ea
+      internalID: -1215505151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: k2
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 225
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef08d3dd5c105f41a235c8b3229f970
+      internalID: -1455020579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: k3
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 225
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a63b0ffc9d6fd43a21bf38b6e55b43
+      internalID: -1156869036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: k4
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 225
+        width: 9
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26170fef6362cb249ac2aee209aa6a93
+      internalID: -734218399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: k6
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 193
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c4a3f9fd329ce468cb9bdcce9afc34
+      internalID: -147123876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: k8
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 192
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90cd792e3cda2bd488adfb7b0a4492c4
+      internalID: 1670199326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: k9
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 192
+        width: 12
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbdc9f6258ded9e419d6d17fa77f9a14
+      internalID: 1999633085
       vertices: []
       indices: 
       edges: []
@@ -496,20 +643,27 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      k1: -1215505151
       chest_0: 1843813193
       0x72_16x16DungeonTileset.v5_6: -651222735
+      k9: 1999633085
       0x72_16x16DungeonTileset.v5_11: -209988145
       0x72_16x16DungeonTileset.v5_1: 154203981
+      k3: -1156869036
+      k2: -1455020579
       0x72_16x16DungeonTileset.v5_8: 1773224413
       0x72_16x16DungeonTileset.v5_10: 2031613728
       0x72_16x16DungeonTileset.v5_2: -222260707
       0x72_16x16DungeonTileset.v5_0: -10341034
       0x72_16x16DungeonTileset.v5_5: 171832560
+      k4: -734218399
       0x72_16x16DungeonTileset.v5_3: 1521827467
       0x72_16x16DungeonTileset.v5_14: -487069587
       chest_1: -1096364117
       0x72_16x16DungeonTileset.v5_13: 2100515933
+      k8: 1670199326
       0x72_16x16DungeonTileset.v5_12: -1852818345
+      k6: -147123876
       0x72_16x16DungeonTileset.v5_4: -1582648115
       0x72_16x16DungeonTileset.v5_7: 1335710500
       0x72_16x16DungeonTileset.v5_9: -588004888

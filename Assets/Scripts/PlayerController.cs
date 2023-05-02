@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Fighter
 {
     [SerializeField] public BoxCollider2D boxCollider2D;
     [SerializeField] public Vector3 move;
@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour
     {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
-        Debug.Log(x);
-        Debug.Log(y);
+        //Debug.Log(x);
+        //Debug.Log(y);
 
         //reset moveDelta
         move = Vector3.zero;

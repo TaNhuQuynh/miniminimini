@@ -9,6 +9,8 @@ public class Portal : Collidable
 
     protected override void OnCollide(Collider2D coll)
     {
+        //GameManager.instance.Showtext();
+
         if (coll.name == "Player")
         {
             string sceneName = sceneNames[Random.Range(0, sceneNames.Length)];
