@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadState(Scene s,LoadSceneMode mode)
     {
-        if (PlayerPrefs.HasKey("SaveState")) return;
+        if (!PlayerPrefs.HasKey("SaveState")) return;
 
         string[] data = PlayerPrefs.GetString("SaveState").Split("/");
 

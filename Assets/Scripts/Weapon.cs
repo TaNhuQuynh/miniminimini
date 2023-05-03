@@ -25,7 +25,7 @@ public class Weapon : Collidable
     protected override void Update()
     {
         base.Update();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             if (Time.time - lastSwing > cooldown)
             {

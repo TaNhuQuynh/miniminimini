@@ -24,6 +24,7 @@ public class Collidable : MonoBehaviour
             if (hits[i] == null) continue;
             OnCollide(hits[i]);
             
+            //the arr is not cleaned up, so we do it ourself
             hits[i] = null;
         }
     }
