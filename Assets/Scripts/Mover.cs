@@ -36,6 +36,12 @@ public abstract class Mover : Fighter
             transform.localScale = new Vector3(-1, 1, 1);
         }
 
+        //add push vector, if any
+        move += pushDirection;
+
+        //reduce push force every frame,based off recovery speed
+        pushDirection = Vector3.Lerp(pushDirection, Vector3.zero, pushRecoverySpeed);
+
         //đảm bảo rằng có thể di chuyển theo hướng này, bằng cách truyền một hộp ở đó trước, nếu hộp trả về null, thi có thể tự do di chuyển
         hit = Physics2D.BoxCast(transform.position, boxCollider2D.size, 0, new Vector2(0, move.y), Mathf.Abs(move.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider == null)

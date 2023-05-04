@@ -14,6 +14,7 @@ public class Chest : Collectable
             collected = true;
             GetComponent<SpriteRenderer>().sprite = emptyChest;
             //Debug.Log("Quynh " + pesosAmount + " peso!");
+            GameManager.instance.pesos += pesosAmount;
 
             GameManager.instance.Showtext("+" + pesosAmount + " pesos!", 40, color: Color.yellow, transform.position, Vector3.up * 25, 1.5f);
         }

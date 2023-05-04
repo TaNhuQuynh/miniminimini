@@ -4,13 +4,47 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField] private Transform target;
-    [SerializeField] public float speed;
+    public Transform lookAt;
+    public float boundX = 0.3f;
+    public float boundY = 0.15f;
 
-    void LateUpdate()
+    private void Start()
     {
-        var pos = target.position;
-        pos.z = transform.position.z;
-        transform.position = Vector3.Slerp(transform.position, pos, speed);
+        lookAt = GameObject.Find("Player").transform;
+    }
+
+    private void LateUpdate()
+    {
+        Vector3 delta = Vector3.zero;
+
+        //this is to check if we are inside the bounds on the X axis
+        float deltaX = lookAt.position.x - transform.position.x;
+        if (deltaX > boundX || deltaX < -boundX)
+        {
+            if (transform.position.x < lookAt.position.x)
+            {
+                delta.x = deltaX - boundX;
+            }
+            else
+            {
+                delta.x = deltaX + boundX;
+            }
+        }
+
+        //this is to check if we are inside the bounds on the Y axis
+        float deltaY = lookAt.position.y - transform.position.y;
+        if (deltaY > boundY || deltaY < -boundY)
+        {
+            if (transform.position.y < lookAt.position.y)
+            {
+                delta.y = deltaY - boundY;
+            }
+            else
+            {
+                delta.y = deltaY + boundY;
+            }
+        }
+
+        transform.position += new Vector3(delta.x, delta.y, 0);
     }
 }

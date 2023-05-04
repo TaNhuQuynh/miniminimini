@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     //References
     public PlayerController player;
 
-    //public weapon...
+    public Weapon weapon;
     public FloatingTextManager floatingText;
 
     //logic
@@ -39,6 +39,73 @@ public class GameManager : MonoBehaviour
     public void Showtext(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
         floatingText.Show(msg, fontSize, color, position, motion, duration);
+    }
+
+    //upgrade weapon
+    public bool TryUpgradeWeapon()
+    {
+        // is the weapon max level
+        if (weaponPrice.Count <= weapon.weaponLevel)
+            return false;
+
+        if (pesos >= weaponPrice[weapon.weaponLevel])
+        {
+            pesos -= weaponPrice[weapon.weaponLevel];
+            weapon.UpgradeWeapon();
+            return true;
+        }
+
+        return false;
+    }
+
+    //private void Update()
+    //{
+    //     Debug.Log(GetCurrentLevel());
+    //}
+
+    //exp system
+    public int GetCurrentLevel()
+    {
+        int r = 0;
+        int add = 0;
+        while (exp >= add)
+        {
+            add += xpTable[r];
+            r++;
+
+            if (r == xpTable.Count)//max level
+                return r;
+        }
+        return r;
+    }
+
+
+    public int GetXpLevel(int level)
+    {
+        int r = 0;
+        int xp = 0;
+
+        while (r < level)
+        {
+            xp += xpTable[r];
+            r++;
+        }
+        return xp;
+    }
+
+    public void GrantXp(int xp)
+    {
+        int currLevel = GetCurrentLevel();
+        exp += xp;
+        if (currLevel < GetCurrentLevel())
+            OnLevelUp();
+    }
+
+
+    public void OnLevelUp()
+    {
+        Debug.Log("Level Up !!!");
+        player.OnLevelUp();
     }
 
     //save Satte
@@ -56,7 +123,7 @@ public class GameManager : MonoBehaviour
         s += "0" + "/";
         s += pesos.ToString() + "/";
         s += exp.ToString() + "/";
-        s += "0";
+        s += weapon.weaponLevel.ToString();
 
         PlayerPrefs.SetString("SaveState", s);
     }
@@ -69,10 +136,17 @@ public class GameManager : MonoBehaviour
 
         //change playerSkin
         pesos = int.Parse(data[1]);
+
+        //exp
         exp = int.Parse(data[2]);
+        if(GetCurrentLevel()!=1)
+            player.SetLevel(GetCurrentLevel());
 
         //change weaponLevel
+        weapon.SetWeaponLevel(int.Parse(data[3]));
+        
 
         Debug.Log("LoadSate");
+
     }
 }

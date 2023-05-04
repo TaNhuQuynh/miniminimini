@@ -22,7 +22,7 @@ public class Fighter : MonoBehaviour
         if (Time.time - lastImmune > immuneTime)
         {
             lastImmune = Time.time;
-            hitPonit = dam.damageAmount;
+            hitPonit -= dam.damageAmount;
             pushDirection = (transform.position - dam.origin).normalized * dam.pushForce;
 
             GameManager.instance.Showtext(dam.damageAmount.ToString(), 30, color: Color.red, transform.position, Vector3.zero, 0.5f);
