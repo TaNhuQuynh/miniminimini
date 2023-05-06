@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     public RectTransform hitpointBar;
     public GameObject hud;
     public GameObject menu;
+    public Animator deadMenuAnim;
 
     //logic
     public int pesos;
@@ -128,6 +129,13 @@ public class GameManager : MonoBehaviour
     public void OnSceneLoaded(Scene s,LoadSceneMode mode)
     {
         player.transform.position = GameObject.Find("SpawnPoint").transform.position;
+    }
+
+    //dead menu and respwan
+    public void Respawn()
+    {
+        deadMenuAnim.SetTrigger("Hide");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("game");
     }
 
     //save Satte

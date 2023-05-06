@@ -138,4 +138,4 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  healingAmount: 1
+  healingAmount: 5

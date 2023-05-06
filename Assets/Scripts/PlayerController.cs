@@ -6,6 +6,7 @@ public class PlayerController : Mover
 {
 
     private SpriteRenderer spriteRenderer;
+    private bool isAlive = true;
 
     protected override void Start()
     {
@@ -16,18 +17,26 @@ public class PlayerController : Mover
 
     protected override void ReceiveDamage(Damage dam)
     {
+        if (!isAlive) return;
+
         base.ReceiveDamage(dam);
         GameManager.instance.OnHitpointChange();
 ;
     }
 
+    protected override void Death()
+    {
+        isAlive = false;
+        GameManager.instance.deadMenuAnim.SetTrigger("Show");
+    }
     private void FixedUpdate()
     {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         //Debug.Log(x);
         //Debug.Log(y);
-        UpdateMotor(new Vector3(x, y, 0));
+        if(isAlive)
+            UpdateMotor(new Vector3(x, y, 0));
     }
 
     public void SwapSprite(int skinId)
