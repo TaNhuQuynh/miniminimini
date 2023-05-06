@@ -269,8 +269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9de9a9646e2ac4dbf4e89d23a58822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPonit: 10
-  maxHitPonit: 10
+  hitPonit: 50
+  maxHitPonit: 50
   pushRecoverySpeed: 0.2
 --- !u!61 &7879957448193213591
 BoxCollider2D:
