@@ -41,5 +41,16 @@ public class PlayerController : Mover
             OnLevelUp();
         }
     }
+    public void Heal(int healingAmount)
+    {
+        if (hitPonit == maxHitPonit)
+            return;
+
+        hitPonit += healingAmount;
+        if (hitPonit > maxHitPonit)
+            hitPonit = maxHitPonit;
+        GameManager.instance.Showtext("+" + healingAmount.ToString() + " hp", 25, color: Color.green, transform.position, Vector3.up * 30, 1.0f);
+        
+    }
 }
    
