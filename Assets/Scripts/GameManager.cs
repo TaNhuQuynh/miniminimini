@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += LoadState;
         //DontDestroyOnLoad(gameObject);
         //DontDestroyOnLoad(hitpointBar.gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     //resources
@@ -121,6 +122,12 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Level Up !!!");
         player.OnLevelUp();
+        OnHitpointChange();
+    }
+
+    public void OnSceneLoaded(Scene s,LoadSceneMode mode)
+    {
+        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
     }
 
     //save Satte
@@ -145,6 +152,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadState(Scene s,LoadSceneMode mode)
     {
+        SceneManager.sceneLoaded -= LoadState;
         if (!PlayerPrefs.HasKey("SaveState")) return;
 
         string[] data = PlayerPrefs.GetString("SaveState").Split("/");
