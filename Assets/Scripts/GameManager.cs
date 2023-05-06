@@ -148,5 +148,7 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("LoadSate");
 
+        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
+
     }
 }
