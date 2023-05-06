@@ -14,6 +14,13 @@ public class PlayerController : Mover
         DontDestroyOnLoad(gameObject);
     }
 
+    protected override void ReceiveDamage(Damage dam)
+    {
+        base.ReceiveDamage(dam);
+        GameManager.instance.OnHitpointChange();
+;
+    }
+
     private void FixedUpdate()
     {
         float x = Input.GetAxisRaw("Horizontal");
@@ -50,7 +57,8 @@ public class PlayerController : Mover
         if (hitPonit > maxHitPonit)
             hitPonit = maxHitPonit;
         GameManager.instance.Showtext("+" + healingAmount.ToString() + " hp", 25, color: Color.green, transform.position, Vector3.up * 30, 1.0f);
-        
+        GameManager.instance.OnHitpointChange();
     }
+
 }
    

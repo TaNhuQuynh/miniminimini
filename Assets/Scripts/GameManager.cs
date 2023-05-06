@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
         instance = this;
         SceneManager.sceneLoaded += LoadState;
         DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(hitpointBar.gameObject);
     }
 
     //resources
@@ -32,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     public Weapon weapon;
     public FloatingTextManager floatingText;
+    public RectTransform hitpointBar;
 
     //logic
     public int pesos;
@@ -58,6 +60,13 @@ public class GameManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    //hitpon tBar
+    public void OnHitpointChange()
+    {
+        float ratio = (float)player.hitPonit / (float)player.maxHitPonit;
+        hitpointBar.localScale = new Vector3(ratio, 1, 1);
     }
 
     //private void Update()
