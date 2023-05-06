@@ -13,13 +13,15 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             Destroy(player.gameObject);
             Destroy(floatingText.gameObject);
+            Destroy(hud);
+            Destroy(menu);
             return;
         }
 
         instance = this;
         SceneManager.sceneLoaded += LoadState;
-        DontDestroyOnLoad(gameObject);
-        DontDestroyOnLoad(hitpointBar.gameObject);
+        //DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(hitpointBar.gameObject);
     }
 
     //resources
@@ -34,6 +36,8 @@ public class GameManager : MonoBehaviour
     public Weapon weapon;
     public FloatingTextManager floatingText;
     public RectTransform hitpointBar;
+    public GameObject hud;
+    public GameObject menu;
 
     //logic
     public int pesos;

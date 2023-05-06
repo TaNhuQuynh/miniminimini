@@ -11,7 +11,7 @@ public class PlayerController : Mover
     {
         base.Start();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     protected override void ReceiveDamage(Damage dam)
